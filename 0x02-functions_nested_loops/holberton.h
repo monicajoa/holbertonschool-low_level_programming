@@ -11,5 +11,6 @@ int _abs(int d);
 int print_last_digit(int ld);
 void jack_bauer(void);
 int add(int n1, int n2);
+void times_table(void);
 
 #endif
