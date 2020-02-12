@@ -18,7 +18,7 @@ void print_to_98(int n)
 			if (cont == 98)
 			printf("%d", cont);
 			else
-			printf("%d ,", cont);
+			printf("%d, ", cont);
 		}
 		putchar('\n');
 	}
@@ -29,7 +29,7 @@ void print_to_98(int n)
 			if (cont == 98)
 			printf("%d", cont);
 			else
-			printf("%d ,", cont);
+			printf("%d, ", cont);
 		}
 		putchar('\n');
 	}
