@@ -1,7 +1,7 @@
 #include "holberton.h"
 /**
  *_strlen - function that returns the length of a string
- *@*s: variable save word "holberton" string
+ *@s: variable save word "holberton" string
  *
  * Return: Always 0 (Success)
  */
@@ -13,7 +13,7 @@ int _strlen(char *s)
 	while (l)
 	{
 		i++;
-		l= s[i];
+		l = s[i];
 	}
 	return (i);
 }
