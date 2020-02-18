@@ -2,7 +2,7 @@
 
 /**
  * reset_to_98 - function that takes a pointer to an int.
- * @*n: variable with memory path value
+ * @n: variable with memory path value
  *
  * Return: Always 0.
  */
