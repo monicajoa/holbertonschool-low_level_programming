@@ -1,7 +1,7 @@
 #include "holberton.h"
 /**
- *puts2 - function that returns the length of a string
- *@str: variable save word "holberton" string
+ *puts2 - function that prints every other character of a string
+ *@str: array with the characters
  *
  * Return: Always 0 (Success)
  */

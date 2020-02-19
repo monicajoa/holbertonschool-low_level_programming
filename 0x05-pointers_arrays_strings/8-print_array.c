@@ -1,7 +1,7 @@
 #include "holberton.h"
 #include <stdio.h>
 /**
- *print_array - function that prints half of a string
+ *print_array - function that prints n elements of an array of integers
  *@a: array with the characters
  *@n: number of elements of the array to be printed
  *
