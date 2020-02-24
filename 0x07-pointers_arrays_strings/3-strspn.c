@@ -1,8 +1,8 @@
 #include "holberton.h"
 /**
  *_strspn - function that gets the length of a prefix
- *@s:the pointer with the address of the area
- *@accept:
+ *@s:the string to check
+ *@accept:letters to accept and count
  *
  * Return: Always 0 (Success)
  */
