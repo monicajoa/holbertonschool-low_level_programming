@@ -2,7 +2,7 @@
 /**
  *_strpbrk - function that searches a string for any of a set of bytes
  *@s:the string to check
- *@accept:letters to accept and count
+ *@accept:letters to accept and
  *
  * Return: Always 0 (Success)
  */
@@ -27,13 +27,10 @@ char *_strpbrk(char *s, char *accept)
 			{
 				return (s + index_1);
 			}
-			else if (s[index_1] == '\0')
-			{
-				s = '\0';
-			}
 		index_2++;
 		}
 	index_1++;
 	}
+	s = '\0';
 	return (s);
 }
