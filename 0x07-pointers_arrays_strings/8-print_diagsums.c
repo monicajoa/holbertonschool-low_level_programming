@@ -1,6 +1,6 @@
 #include <stdio.h>
 /**
- * _print_diagsums - prints the sum of the two diagonals of a matrix.
+ * print_diagsums - prints the sum of the two diagonals of a matrix.
  * @a: pointer with the address of the matrix
  * @size: int that represents the size of the matrix
  *
