@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <ctype.h>
 /**
  *main - program that prints the number of arguments passed into it.
  *@argc:the number of command line arguments and size of argv.
@@ -13,12 +12,12 @@ int main(int argc, char *argv[])
 	int n;
 	int i;
 
-	n = atoi(argv[1]);
 	if (argc != 2)
 	{
 		printf("Error\n");
 		return (1);
 	}
+	n = atoi(argv[1]);
 	if (n < 0)
 	{
 		printf("0\n");
