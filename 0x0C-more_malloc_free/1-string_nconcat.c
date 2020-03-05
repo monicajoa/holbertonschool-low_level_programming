@@ -4,6 +4,7 @@
  *string_nconcat - function that concatenates two strings
  *@s1:string number one that contain "Holberton"
  *@s2:string number two that contain "School"
+ *@n:number of bytes of string s2
  *
  * Return: Always 0 (Success)
  */
