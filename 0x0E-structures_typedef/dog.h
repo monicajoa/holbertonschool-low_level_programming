@@ -1,6 +1,7 @@
 #ifndef DOG
 #define DOG
 
+
 int _putchar(char c);
 
 /**
@@ -11,12 +12,12 @@ int _putchar(char c);
  *
  * Description: Dog Information
  */
-struct dog
+typedef struct dog
 {
 	char *name;
 	float age;
 	char *owner;
-};
+}dog_t;
 void init_dog(struct dog *d, char *name, float age, char *owner);
 void print_dog(struct dog *d);
 #endif
