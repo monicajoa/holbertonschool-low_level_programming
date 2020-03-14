@@ -7,11 +7,11 @@
  *
  * Return: void
  */
-void p_char(void *b)
+void p_char(va_list pr)
 {
 	char *c;
 
-	c = b;
+	c = va_arg(pr, char*);
 	printf("%s", c);
 }
 /**
@@ -20,13 +20,11 @@ void p_char(void *b)
  *
  * Return: void
  */
-void p_int(void *b)
+void p_int(va_list pr)
 {
-	int *c;
 	int a;
 
-	c = b;
-	a = *c;
+	a = va_arg(pr, int);
 	printf("%d", a);
 }
 /**
@@ -35,11 +33,11 @@ void p_int(void *b)
  *
  * Return: void
  */
-void p_str(void *b)
+void p_str(va_list pr)
 {
 	char *c;
 
-	c = b;
+	c = va_arg(pr, char*);
 	printf("%s", c);
 }
 /**
@@ -48,13 +46,11 @@ void p_str(void *b)
  *
  * Return: void
  */
-void p_float(void *b)
+void p_float(va_list pr)
 {
-	float *c;
 	float a;
 
-	c = b;
-	a = *c;
+	a = va_arg(pr, double);
 	printf("%f", a);
 }
 /**
@@ -74,7 +70,6 @@ void print_all(const char * const format, ...)
 	};
 	int i, j;
 	va_list lp;
-	void *n;
 
 	va_start(lp, format);
 	i = 0;
@@ -85,8 +80,7 @@ void print_all(const char * const format, ...)
 		{
 			if (format[i] == a[j].m[0])
 			{
-				n = va_arg(lp, void *);
-				a[j].fun(n);
+				a[j].fun(lp);
 			}
 		}
 	}
