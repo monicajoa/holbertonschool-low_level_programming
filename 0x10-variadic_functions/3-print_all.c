@@ -9,10 +9,7 @@
  */
 void p_char(va_list pr)
 {
-	char *c;
-
-	c = va_arg(pr, char*);
-	printf("%s", c);
+	printf("%c", va_arg(pr, int));
 }
 /**
  * p_int - print a integer
@@ -22,10 +19,7 @@ void p_char(va_list pr)
  */
 void p_int(va_list pr)
 {
-	int a;
-
-	a = va_arg(pr, int);
-	printf("%d", a);
+	printf("%d", va_arg(pr, int));
 }
 /**
  * p_str - print a string
@@ -35,10 +29,7 @@ void p_int(va_list pr)
  */
 void p_str(va_list pr)
 {
-	char *c;
-
-	c = va_arg(pr, char*);
-	printf("%s", c);
+	printf("%s", va_arg(pr, char *));
 }
 /**
  * p_float - print a float
@@ -48,10 +39,7 @@ void p_str(va_list pr)
  */
 void p_float(va_list pr)
 {
-	float a;
-
-	a = va_arg(pr, double);
-	printf("%f", a);
+	printf("%f", va_arg(pr, double));
 }
 /**
  *print_all - function that prints anything.
@@ -65,25 +53,26 @@ void print_all(const char * const format, ...)
 		{"c", p_char},
 		{"i", p_int},
 		{"s", p_str},
-		{"f", p_float},
-		{NULL, NULL}
+		{"f", p_float}
 	};
 	int i, j;
 	va_list lp;
 
 	va_start(lp, format);
 	i = 0;
-	while (format[i] != '\0')
+	while (format[i] != 0 && format != 0)
 	{
 		j = 0;
-		while (a[j].m != '\0')
+		while (j < 5)
 		{
 			if (format[i] == a[j].m[0])
 			{
-				a[j].fun(lp);
+				(a[j].fun)(lp);
 			}
+			j++;
 		}
+		i++;
 	}
-	printf("\n");
 	va_end(lp);
+	printf("\n");
 }
