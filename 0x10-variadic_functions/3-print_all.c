@@ -34,8 +34,7 @@ void p_str(va_list pr)
 	str = va_arg(pr, char*);
 	if (str == '\0')
 		printf("(nil)");
-	else
-		printf("%s", str);
+	printf("%s", str);
 }
 /**
  * p_float - print a float
