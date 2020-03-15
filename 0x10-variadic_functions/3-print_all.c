@@ -3,7 +3,7 @@
 #include "variadic_functions.h"
 /**
  * p_char - print a character
- * @b: address with the character to print.
+ * @pr: list of paramethers
  *
  * Return: void
  */
@@ -13,7 +13,7 @@ void p_char(va_list pr)
 }
 /**
  * p_int - print a integer
- * @b: address with the integer to print.
+ * @pr: list of paramethers
  *
  * Return: void
  */
@@ -23,7 +23,7 @@ void p_int(va_list pr)
 }
 /**
  * p_str - print a string
- * @b: address with the string to print.
+ * @pr: list of paramethers
  *
  * Return: void
  */
@@ -39,7 +39,7 @@ void p_str(va_list pr)
 }
 /**
  * p_float - print a float
- * @b: address with the float to print
+ * @pr: list of paramethers
  *
  * Return: void
  */
