@@ -9,7 +9,7 @@
 typedef struct fmt
 {
 	char *m;
-	void (*fun)(void*);
+	void (*fun)();
 } fmt;
 
 int _putchar(char c);

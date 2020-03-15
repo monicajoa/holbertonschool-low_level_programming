@@ -29,7 +29,13 @@ void p_int(va_list pr)
  */
 void p_str(va_list pr)
 {
-	printf("%s", va_arg(pr, char *));
+	char *str;
+
+	str = va_arg(pr, char*);
+	if (str == '\0')
+		printf("(nil)");
+	else
+		printf("%s", str);
 }
 /**
  * p_float - print a float
@@ -49,7 +55,7 @@ void p_float(va_list pr)
  */
 void print_all(const char * const format, ...)
 {
-	fmt a[] = {
+	fmt format_s[] = {
 		{"c", p_char},
 		{"i", p_int},
 		{"s", p_str},
@@ -57,17 +63,21 @@ void print_all(const char * const format, ...)
 	};
 	int i, j;
 	va_list lp;
+	char *voidstr = "";
+	char *space = ", ";
 
 	va_start(lp, format);
 	i = 0;
-	while (format[i] != 0 && format != 0)
+	while (format[i] != '\0')
 	{
 		j = 0;
-		while (j < 5)
+		while (j < 4)
 		{
-			if (format[i] == a[j].m[0])
+			if (format[i] == format_s[j].m[0])
 			{
-				(a[j].fun)(lp);
+				printf("%s", voidstr);
+				(format_s[j].fun)(lp);
+				voidstr = space;
 			}
 			j++;
 		}
