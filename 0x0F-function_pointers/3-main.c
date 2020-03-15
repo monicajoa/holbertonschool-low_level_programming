@@ -13,9 +13,10 @@ int main(int argc, char *argv[])
 	int a, b, c;
 	int (*p)(int, int);
 
-	if (argc > 4)
+	if (argc != 4)
 	{
-		return (0);
+		printf("Error\n");
+		exit(98);
 	}
 	a = atoi(argv[1]);
 	b = atoi(argv[3]);

@@ -1,4 +1,6 @@
-# include "3-calc.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include "3-calc.h"
 /**
  *op_add - function that returns a add
  *@a: variable with the integer one
@@ -55,6 +57,11 @@ int op_div(int a, int b)
 {
 	int res_div;
 
+	if (b == 0)
+	{
+		printf("Error\n");
+		exit(100);
+	}
 	res_div = a / b;
 	return (res_div);
 }
@@ -70,6 +77,11 @@ int op_mod(int a, int b)
 {
 	int res_mod;
 
+	if (b == 0)
+	{
+		printf("Error\n");
+		exit(100);
+	}
 	res_mod = a % b;
 	return (res_mod);
 }
