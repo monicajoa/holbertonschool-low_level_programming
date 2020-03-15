@@ -33,7 +33,7 @@ void p_str(va_list pr)
 
 	str = va_arg(pr, char*);
 	if (str == '\0')
-		printf("(nil)");
+		str = "(nil)";
 	printf("%s", str);
 }
 /**
