@@ -76,7 +76,7 @@ void print_all(const char * const format, ...)
 			if (format[i] == format_s[j].m[0])
 			{
 				printf("%s", voidstr);
-				(format_s[j].fun)(lp);
+				format_s[j].fun(lp);
 				voidstr = space;
 			}
 			j++;
