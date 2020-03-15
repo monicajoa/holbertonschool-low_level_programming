@@ -58,7 +58,8 @@ void print_all(const char * const format, ...)
 		{"c", p_char},
 		{"i", p_int},
 		{"s", p_str},
-		{"f", p_float}
+		{"f", p_float},
+		{NULL, NULL}
 	};
 	int i, j;
 	va_list lp;
@@ -70,7 +71,7 @@ void print_all(const char * const format, ...)
 	while (format[i] != '\0')
 	{
 		j = 0;
-		while (j < 4)
+		while (format_s[j].m != '\0')
 		{
 			if (format[i] == format_s[j].m[0])
 			{
@@ -82,6 +83,6 @@ void print_all(const char * const format, ...)
 		}
 		i++;
 	}
-	va_end(lp);
 	printf("\n");
+	va_end(lp);
 }
