@@ -1,5 +1,3 @@
-#include <stdio.h>
-#include <stdlib.h>
 #include "3-calc.h"
 /**
  * get_op_func - returns ptr to the function that corresponds to the operator
