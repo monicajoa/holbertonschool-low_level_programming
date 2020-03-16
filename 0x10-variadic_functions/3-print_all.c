@@ -9,7 +9,7 @@
  */
 void p_char(va_list pr)
 {
-	printf("%c", va_arg(pr, int));
+	printf("%c", (char) va_arg(pr, int));
 }
 /**
  * p_int - print a integer
@@ -33,6 +33,7 @@ void p_str(va_list pr)
 
 	str = va_arg(pr, char*);
 	if (str == '\0')
+
 		str = "(nil)";
 	printf("%s", str);
 }
@@ -68,7 +69,7 @@ void print_all(const char * const format, ...)
 
 	va_start(lp, format);
 	i = 0;
-	while (format[i] != '\0' && format != '\0')
+	while (format != '\0' && format[i] != '\0')
 	{
 		j = 0;
 		while (format_s[j].m != '\0')
