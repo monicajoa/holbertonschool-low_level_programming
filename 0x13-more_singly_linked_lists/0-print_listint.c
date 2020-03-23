@@ -1,7 +1,7 @@
 #include "lists.h"
 /**
  *print_listint - function that prints all the elements of a list
- *@h: pointer type list_t (structure) with the head of the list
+ *@h: pointer type listint_t (structure) with the head of the list
  *
  * Return: unsigned int with the numbers printed
  */
