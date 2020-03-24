@@ -9,6 +9,10 @@ void free_listint2(listint_t **head)
 {
 	listint_t *aux_1, *aux_2;
 
+	if (head == NULL)
+	{
+		return;
+	}
 	aux_2 = *head;
 	while (aux_2 != '\0')
 	{
