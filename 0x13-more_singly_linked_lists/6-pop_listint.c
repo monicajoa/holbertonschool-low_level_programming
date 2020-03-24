@@ -12,7 +12,7 @@ int pop_listint(listint_t **head)
 	
 	if (head == NULL)
 	{
-		return;
+		return (0);
 	}
 	aux_1 = *head;
 	aux_2 = *head;
