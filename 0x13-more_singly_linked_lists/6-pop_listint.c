@@ -9,7 +9,11 @@ int pop_listint(listint_t **head)
 {
 	listint_t *aux_1, *aux_2;
 	int i;
-
+	
+	if (head == NULL)
+	{
+		return;
+	}
 	aux_1 = *head;
 	aux_2 = *head;
 	aux_1 = aux_1->next;
