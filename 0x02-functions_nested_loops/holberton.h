@@ -1,5 +1,5 @@
-#ifndef PEER
-#define PEER
+#ifndef HOLBERTON_H
+#define HOLBERTON_H
 
 int _putchar(char c);
 void print_alphabet(void);
@@ -13,5 +13,6 @@ void jack_bauer(void);
 int add(int n1, int n2);
 void times_table(void);
 void print_to_98(int n);
+void print_times_table(int n);
 
-#endif
+#endif /*HOLBERTON_H */
