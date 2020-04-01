@@ -8,8 +8,8 @@
  */
 int append_text_to_file(const char *filename, char *text_content)
 {
-	int opn, wrt;
-	int i;
+	int op, wt;
+	int j;
 
 	if (filename == '\0')
 	{
@@ -19,21 +19,21 @@ int append_text_to_file(const char *filename, char *text_content)
 	{
 		return (1);
 	}
-	opn = open(filename, O_RDWR | O_APPEND);
-	if (opn == -1)
+	op = open(filename, O_RDWR | O_APPEND);
+	if (op == -1)
 	{
 		return (-1);
 	}
-	i = 0;
-	while (text_content[i] != '\0')
+	j = 0;
+	while (text_content[j] != '\0')
 	{
-		i++;
+		j++;
 	}
-	wrt = write(opn, text_content, i);
-	if (wrt == -1)
+	wt = write(op, text_content, j);
+	if (wt == -1)
 	{
 		return (-1);
 	}
-	close(fd);
+	close(op);
 	return (1);
 }
