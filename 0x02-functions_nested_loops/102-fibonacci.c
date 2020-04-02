@@ -8,19 +8,20 @@ int main(void)
 {
 	unsigned long int num1 = 0;
 	unsigned long int num2 = 1;
-	unsigned long int a;
+	unsigned long int aux;
 	int b;
 
 	for (b = 0; b < 50; b++)
 	{
-		a = num1 + num2;
+		aux = num1 + num2;
 		num1 = num2;
-		num2 = a;
+		num2 = aux;
 		printf("%lu", num2);
 		if (b != 49)
 		{
-			printf(",");
+			printf(", ");
 		}
 	}
 	printf("\n");
+	return (0);
 }
