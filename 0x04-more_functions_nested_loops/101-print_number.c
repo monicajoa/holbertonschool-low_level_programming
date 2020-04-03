@@ -7,29 +7,17 @@
  */
 void print_number(int num)
 {
-	int aux;
-	int factor = 1;
+	unsigned int aux;
 
-	if (num == 0)
-	{
-		_putchar('0');
-		return;
-	}
 	if (num < 0)
 	{
-		num = num * (-1);
 		_putchar('-');
+		num = num * (-1);
 	}
 	aux = num;
-	while (aux)
+	if ((aux / 10) > 0)
 	{
-		aux = aux / 10;
-		factor = factor * 10;
+		print_number(aux / 10);
 	}
-	while (factor > 1)
-	{
-		factor = factor / 10;
-		_putchar((num / factor) + '0');
-		num = num % factor;
-	}
+	_putchar((aux % 10) + '0');
 }
